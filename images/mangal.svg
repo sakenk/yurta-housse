@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Мангал и казан на природе">
+  <defs>
+    <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A1035"/>
+      <stop offset="50%" stop-color="#3D2060"/>
+      <stop offset="100%" stop-color="#6B3A90" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="horizon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8602A"/>
+      <stop offset="100%" stop-color="#F5A040"/>
+    </linearGradient>
+    <linearGradient id="ground3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A3520"/>
+      <stop offset="100%" stop-color="#2C1E0F"/>
+    </linearGradient>
+    <radialGradient id="fire-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF8C00" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FF4500" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fire-glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FF6600" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Night sky -->
+  <rect width="800" height="600" fill="url(#sky3)"/>
+
+  <!-- Stars -->
+  <g fill="white" opacity="0.8">
+    <circle cx="50" cy="40" r="1.5"/>
+    <circle cx="120" cy="25" r="1"/>
+    <circle cx="200" cy="60" r="1.5"/>
+    <circle cx="280" cy="30" r="1"/>
+    <circle cx="340" cy="50" r="1.5"/>
+    <circle cx="450" cy="20" r="1"/>
+    <circle cx="520" cy="45" r="1.5"/>
+    <circle cx="600" cy="30" r="1"/>
+    <circle cx="680" cy="55" r="1.5"/>
+    <circle cx="750" cy="20" r="1"/>
+    <circle cx="90" cy="100" r="1"/>
+    <circle cx="170" cy="120" r="1.5"/>
+    <circle cx="400" cy="80" r="1.5"/>
+    <circle cx="650" cy="90" r="1"/>
+    <circle cx="720" cy="110" r="1.5"/>
+  </g>
+
+  <!-- Sunset/horizon glow -->
+  <rect x="0" y="340" width="800" height="80" fill="url(#horizon)" opacity="0.6"/>
+
+  <!-- Mountains silhouette -->
+  <polygon points="-10,420 100,250 200,310 320,200 440,290 560,180 660,260 760,200 810,270 810,420" fill="#1A0E05" opacity="0.9"/>
+
+  <!-- Distant tree silhouettes -->
+  <g fill="#0D0805">
+    <polygon points="60,390 50,420 70,420"/>
+    <polygon points="75,385 65,420 85,420"/>
+    <polygon points="700,385 690,420 710,420"/>
+    <polygon points="718,378 707,420 729,420"/>
+    <polygon points="736,390 726,420 746,420"/>
+  </g>
+
+  <!-- Ground -->
+  <rect y="420" width="800" height="180" fill="url(#ground3)"/>
+  <!-- Ground texture -->
+  <ellipse cx="400" cy="422" rx="450" ry="18" fill="#3A2810" opacity="0.5"/>
+
+  <!-- Fire glow on ground -->
+  <ellipse cx="400" cy="430" rx="150" ry="60" fill="url(#fire-glow)" opacity="0.7"/>
+  <ellipse cx="400" cy="420" rx="80" ry="30" fill="url(#fire-glow2)" opacity="0.8"/>
+
+  <!-- MANGAL (BBQ grill) -->
+  <!-- Legs -->
+  <rect x="340" y="400" width="10" height="100" rx="3" fill="#5A5A5A"/>
+  <rect x="450" y="400" width="10" height="100" rx="3" fill="#5A5A5A"/>
+  <!-- Cross bar -->
+  <rect x="330" y="440" width="140" height="8" rx="2" fill="#4A4A4A"/>
+  <!-- Grill box -->
+  <rect x="315" y="355" width="170" height="55" rx="6" fill="#3A3A3A"/>
+  <!-- Grill top rim -->
+  <rect x="310" y="350" width="180" height="12" rx="4" fill="#5A5A5A"/>
+  <!-- Grill bars -->
+  <g stroke="#6A6A6A" stroke-width="3">
+    <line x1="325" y1="363" x2="325" y2="408"/>
+    <line x1="342" y1="363" x2="342" y2="408"/>
+    <line x1="359" y1="363" x2="359" y2="408"/>
+    <line x1="376" y1="363" x2="376" y2="408"/>
+    <line x1="393" y1="363" x2="393" y2="408"/>
+    <line x1="410" y1="363" x2="410" y2="408"/>
+    <line x1="427" y1="363" x2="427" y2="408"/>
+    <line x1="444" y1="363" x2="444" y2="408"/>
+    <line x1="461" y1="363" x2="461" y2="408"/>
+    <line x1="478" y1="363" x2="478" y2="408"/>
+  </g>
+
+  <!-- Meat on grill -->
+  <g fill="#8B2500" opacity="0.9">
+    <rect x="325" y="344" width="35" height="12" rx="4"/>
+    <rect x="368" y="344" width="40" height="12" rx="4"/>
+    <rect x="416" y="344" width="35" height="12" rx="4"/>
+    <rect x="458" y="344" width="30" height="12" rx="4"/>
+  </g>
+  <!-- Sizzle lines -->
+  <g stroke="#FF8C00" stroke-width="1.5" opacity="0.7">
+    <path d="M335,340 Q337,330 339,325"/>
+    <path d="M380,340 Q383,328 386,322"/>
+    <path d="M430,340 Q432,329 434,324"/>
+    <path d="M472,340 Q474,330 476,325"/>
+  </g>
+
+  <!-- FIRE FLAMES -->
+  <g>
+    <!-- Main flames -->
+    <path d="M365,345 Q355,310 370,280 Q380,260 375,240 Q390,265 388,285 Q400,255 398,230 Q415,262 410,285 Q420,260 425,240 Q430,268 422,290 Q435,270 432,285 Q440,310 430,330 Q415,345 385,347 Z" fill="#FF6600" opacity="0.9"/>
+    <path d="M372,342 Q363,318 375,295 Q384,278 380,262 Q392,280 390,298 Q400,272 402,255 Q414,278 407,298 Q418,276 422,262 Q427,283 420,302 Q430,284 428,297 Q435,315 425,330 Q410,344 390,346 Z" fill="#FFAA00" opacity="0.85"/>
+    <path d="M380,342 Q374,325 382,308 Q388,295 385,282 Q394,295 393,308 Q400,285 403,272 Q411,290 406,308 Q416,292 417,305 Q422,318 415,332 Q405,344 388,345 Z" fill="#FFD700" opacity="0.8"/>
+    <!-- Small side flames -->
+    <path d="M345,352 Q338,328 348,305 Q358,290 352,275 Q362,292 360,308 Q368,290 372,278 Q377,298 368,312 Q375,298 376,308 Q380,323 370,338 Z" fill="#FF4500" opacity="0.7"/>
+    <path d="M430,350 Q423,326 432,303 Q440,286 434,272 Q445,288 443,305 Q452,287 455,273 Q459,295 452,309 Q458,295 460,306 Q463,322 454,337 Z" fill="#FF4500" opacity="0.7"/>
+  </g>
+
+  <!-- KAZAK KAZAN (большой казан) -->
+  <!-- Tripod legs -->
+  <line x1="560" y1="330" x2="530" y2="480" stroke="#5A4030" stroke-width="8" stroke-linecap="round"/>
+  <line x1="560" y1="330" x2="575" y2="485" stroke="#5A4030" stroke-width="8" stroke-linecap="round"/>
+  <line x1="560" y1="330" x2="595" y2="470" stroke="#5A4030" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Kazan body -->
+  <ellipse cx="558" cy="330" rx="70" ry="65" fill="#3A2808"/>
+  <!-- Kazan interior / steam -->
+  <ellipse cx="558" cy="275" rx="65" ry="20" fill="#4A3415"/>
+  <!-- Steam -->
+  <g stroke="white" stroke-width="2.5" fill="none" opacity="0.5" stroke-linecap="round">
+    <path d="M530,268 Q525,248 530,232"/>
+    <path d="M555,262 Q550,240 556,222"/>
+    <path d="M580,268 Q576,248 580,232"/>
+  </g>
+  <!-- Kazan top rim -->
+  <ellipse cx="558" cy="274" rx="68" ry="18" fill="none" stroke="#6B5020" stroke-width="5"/>
+  <!-- Handle -->
+  <path d="M492,330 Q490,310 498,295" fill="none" stroke="#5A4030" stroke-width="6" stroke-linecap="round"/>
+  <path d="M624,330 Q626,310 618,295" fill="none" stroke="#5A4030" stroke-width="6" stroke-linecap="round"/>
+  <!-- Small fire under kazan -->
+  <path d="M530,460 Q525,435 535,415 Q545,400 540,385 Q555,405 553,422 Q562,400 565,385 Q572,407 566,424 Q574,405 578,418 Q582,438 572,456 Z" fill="#FF6600" opacity="0.8"/>
+  <path d="M538,456 Q534,438 540,422 Q548,408 544,396 Q554,412 552,426 Q560,408 563,396 Q568,416 562,428 Q568,412 572,422 Q575,438 567,452 Z" fill="#FFAA00" opacity="0.75"/>
+
+  <!-- Plates and food nearby -->
+  <ellipse cx="220" cy="460" rx="45" ry="14" fill="#D4B896"/>
+  <ellipse cx="220" cy="454" rx="40" ry="11" fill="#C4A884"/>
+  <!-- Food on plate -->
+  <ellipse cx="220" cy="452" rx="28" ry="8" fill="#8B2500" opacity="0.8"/>
+
+  <!-- Firewood pile -->
+  <g fill="#5C3A12" stroke="#3A2008" stroke-width="1">
+    <rect x="350" y="460" width="100" height="12" rx="4" transform="rotate(-5, 350, 460)"/>
+    <rect x="345" y="450" width="95" height="11" rx="4" transform="rotate(3, 345, 450)"/>
+    <rect x="355" y="470" width="90" height="10" rx="4" transform="rotate(-2, 355, 470)"/>
+  </g>
+
+  <!-- People silhouettes sitting around -->
+  <g fill="#1A0A00">
+    <!-- Person 1 (left) -->
+    <circle cx="180" cy="420" r="18"/>
+    <rect x="162" y="435" width="36" height="45" rx="8"/>
+    <rect x="155" y="470" width="20" height="30" rx="6"/>
+    <rect x="183" y="470" width="20" height="30" rx="6"/>
+    <!-- Person 2 (right) -->
+    <circle cx="620" cy="425" r="18"/>
+    <rect x="602" y="440" width="36" height="45" rx="8"/>
+    <rect x="595" y="474" width="20" height="30" rx="6"/>
+    <rect x="623" y="474" width="20" height="30" rx="6"/>
+  </g>
+
+  <!-- Stars / sparks from fire -->
+  <g fill="#FFD700" opacity="0.9">
+    <circle cx="380" cy="295" r="2"/>
+    <circle cx="415" cy="270" r="1.5"/>
+    <circle cx="370" cy="310" r="1.5"/>
+    <circle cx="440" cy="285" r="2"/>
+    <circle cx="395" cy="260" r="1"/>
+  </g>
+</svg>

@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Интерьер казахской юрты">
+  <defs>
+    <radialGradient id="ceiling-light" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE0A0" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#F5C060" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#C4623A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="room-light" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFF0D0" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#2C1E0F" stop-opacity="0.8"/>
+    </radialGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C4623A"/>
+      <stop offset="100%" stop-color="#8B3A1A"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8B6040"/>
+      <stop offset="100%" stop-color="#5C3820"/>
+    </linearGradient>
+    <linearGradient id="carpet-r" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C4623A"/>
+      <stop offset="50%" stop-color="#8B2A0A"/>
+      <stop offset="100%" stop-color="#C4623A"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark background (yurt interior) -->
+  <rect width="800" height="600" fill="#1A0A02"/>
+
+  <!-- Yurt wall (curved) — left side -->
+  <path d="M0,600 Q0,200 200,60 L200,80 Q10,210 15,600 Z" fill="url(#wall)" opacity="0.7"/>
+  <!-- Yurt wall — right side -->
+  <path d="M800,600 Q800,200 600,60 L600,80 Q790,210 785,600 Z" fill="url(#wall)" opacity="0.7"/>
+
+  <!-- Yurt wall lattice pattern (kerege) -->
+  <g stroke="#D4824A" stroke-width="2" opacity="0.5" fill="none">
+    <!-- Left kerege -->
+    <line x1="15" y1="600" x2="140" y2="100"/>
+    <line x1="50" y1="600" x2="165" y2="100"/>
+    <line x1="90" y1="600" x2="192" y2="100"/>
+    <line x1="140" y1="100" x2="15" y2="400"/>
+    <line x1="165" y1="100" x2="30" y2="380"/>
+    <line x1="192" y1="100" x2="50" y2="360"/>
+    <!-- Right kerege -->
+    <line x1="785" y1="600" x2="660" y2="100"/>
+    <line x1="750" y1="600" x2="635" y2="100"/>
+    <line x1="710" y1="600" x2="608" y2="100"/>
+    <line x1="660" y1="100" x2="785" y2="400"/>
+    <line x1="635" y1="100" x2="770" y2="380"/>
+    <line x1="608" y1="100" x2="750" y2="360"/>
+  </g>
+
+  <!-- SHANGRAK (ceiling wheel / tundyk) — viewed from below -->
+  <!-- Outer ring -->
+  <circle cx="400" cy="160" r="145" fill="none" stroke="#C4623A" stroke-width="8"/>
+  <!-- Middle rings -->
+  <circle cx="400" cy="160" r="120" fill="none" stroke="#A03010" stroke-width="3" opacity="0.7"/>
+  <circle cx="400" cy="160" r="95" fill="none" stroke="#C4623A" stroke-width="2" opacity="0.6"/>
+
+  <!-- Ribs radiating from center (uyk) -->
+  <g stroke="#8B5E3C" stroke-width="5" opacity="0.85">
+    <line x1="400" y1="160" x2="255" y2="25"/>
+    <line x1="400" y1="160" x2="400" y2="15"/>
+    <line x1="400" y1="160" x2="545" y2="25"/>
+    <line x1="400" y1="160" x2="545" y2="295"/>
+    <line x1="400" y1="160" x2="400" y2="305"/>
+    <line x1="400" y1="160" x2="255" y2="295"/>
+    <!-- Diagonal ribs -->
+    <line x1="400" y1="160" x2="196" y2="100"/>
+    <line x1="400" y1="160" x2="196" y2="220"/>
+    <line x1="400" y1="160" x2="604" y2="100"/>
+    <line x1="400" y1="160" x2="604" y2="220"/>
+  </g>
+
+  <!-- Outer ribs going to walls -->
+  <g stroke="#6B4020" stroke-width="4" opacity="0.6">
+    <line x1="255" y1="25" x2="60" y2="160"/>
+    <line x1="255" y1="295" x2="60" y2="400"/>
+    <line x1="545" y1="25" x2="740" y2="160"/>
+    <line x1="545" y1="295" x2="740" y2="400"/>
+    <line x1="400" y1="15" x2="400" y2="0"/>
+  </g>
+
+  <!-- Center light (shangrak glow) -->
+  <circle cx="400" cy="160" r="60" fill="url(#ceiling-light)"/>
+  <circle cx="400" cy="160" r="30" fill="#FFE8A0" opacity="0.9" filter="url(#glow)"/>
+
+  <!-- Kazakh ornamental patterns on the ribs -->
+  <g fill="#C4623A" opacity="0.8">
+    <!-- Decorative diamonds along ring -->
+    <polygon points="400,18 408,28 400,38 392,28"/>
+    <polygon points="554,100 562,110 554,120 546,110"/>
+    <polygon points="246,100 254,110 246,120 238,110"/>
+    <polygon points="246,228 254,238 246,248 238,238"/>
+    <polygon points="554,228 562,238 554,248 546,238"/>
+    <polygon points="400,288 408,298 400,308 392,298"/>
+  </g>
+
+  <!-- Room ambient light -->
+  <ellipse cx="400" cy="350" rx="400" ry="280" fill="url(#room-light)"/>
+
+  <!-- Floor -->
+  <ellipse cx="400" cy="560" rx="440" ry="80" fill="url(#floor)"/>
+
+  <!-- CARPETS (кілем) -->
+  <!-- Large central carpet -->
+  <ellipse cx="400" cy="520" rx="280" ry="55" fill="#8B1A1A" opacity="0.9"/>
+  <ellipse cx="400" cy="520" rx="260" ry="48" fill="#C4623A" opacity="0.8"/>
+  <ellipse cx="400" cy="520" rx="238" ry="42" fill="#8B1A1A" opacity="0.7"/>
+  <!-- Carpet pattern -->
+  <g fill="#F5D060" opacity="0.7">
+    <polygon points="400,500 410,515 400,530 390,515"/>
+    <polygon points="360,510 370,522 360,534 350,522"/>
+    <polygon points="440,510 450,522 440,534 430,522"/>
+    <polygon points="320,516 328,524 320,532 312,524"/>
+    <polygon points="480,516 488,524 480,532 472,524"/>
+  </g>
+
+  <!-- KURPESHE (side cushions/benches) -->
+  <!-- Left side -->
+  <path d="M50,480 Q50,400 120,380 Q150,375 170,400 L170,510 Q150,530 80,540 Z" fill="#8B2A0A" opacity="0.9"/>
+  <path d="M55,478 Q55,403 122,384 Q148,379 167,402 L167,507 Q148,526 82,536 Z" fill="#C4623A" opacity="0.7"/>
+  <!-- Pillow left -->
+  <ellipse cx="110" cy="400" rx="35" ry="20" fill="#E8B030" opacity="0.85"/>
+  <ellipse cx="110" cy="398" rx="28" ry="15" fill="#F5C842" opacity="0.7"/>
+
+  <!-- Right side -->
+  <path d="M750,480 Q750,400 680,380 Q650,375 630,400 L630,510 Q650,530 720,540 Z" fill="#8B2A0A" opacity="0.9"/>
+  <path d="M745,478 Q745,403 678,384 Q652,379 633,402 L633,507 Q652,526 718,536 Z" fill="#C4623A" opacity="0.7"/>
+  <!-- Pillow right -->
+  <ellipse cx="690" cy="400" rx="35" ry="20" fill="#E8B030" opacity="0.85"/>
+  <ellipse cx="690" cy="398" rx="28" ry="15" fill="#F5C842" opacity="0.7"/>
+
+  <!-- LOW TABLE (dastarkhan) in center -->
+  <ellipse cx="400" cy="490" rx="120" ry="35" fill="#5C3A12"/>
+  <ellipse cx="400" cy="484" rx="115" ry="30" fill="#8B5E3C"/>
+  <!-- Items on table -->
+  <!-- Teacups -->
+  <ellipse cx="360" cy="476" rx="12" ry="8" fill="#C4623A"/>
+  <ellipse cx="360" cy="472" rx="10" ry="6" fill="#E8804A"/>
+  <ellipse cx="440" cy="476" rx="12" ry="8" fill="#C4623A"/>
+  <ellipse cx="440" cy="472" rx="10" ry="6" fill="#E8804A"/>
+  <!-- Bowl in center -->
+  <ellipse cx="400" cy="474" rx="20" ry="12" fill="#D4A060"/>
+  <ellipse cx="400" cy="470" rx="16" ry="9" fill="#E8B870" opacity="0.9"/>
+  <!-- Samovar shape -->
+  <rect x="388" y="450" width="24" height="26" rx="6" fill="#D4A030"/>
+  <ellipse cx="400" cy="450" rx="16" ry="6" fill="#F5C040"/>
+  <rect x="393" y="440" width="14" height="12" rx="4" fill="#E8B020"/>
+
+  <!-- Decorative textiles / shyrdak pattern on back wall -->
+  <rect x="240" y="350" width="320" height="5" fill="#C4623A" opacity="0.6"/>
+  <g fill="#C4623A" opacity="0.5">
+    <rect x="240" y="360" width="25" height="25" rx="3"/>
+    <rect x="273" y="360" width="25" height="25" rx="3"/>
+    <rect x="306" y="360" width="25" height="25" rx="3"/>
+    <rect x="339" y="360" width="25" height="25" rx="3"/>
+    <rect x="372" y="360" width="25" height="25" rx="3"/>
+    <rect x="405" y="360" width="25" height="25" rx="3"/>
+    <rect x="438" y="360" width="25" height="25" rx="3"/>
+    <rect x="471" y="360" width="25" height="25" rx="3"/>
+    <rect x="504" y="360" width="25" height="25" rx="3"/>
+    <rect x="537" y="360" width="25" height="25" rx="3"/>
+  </g>
+
+  <!-- Hanging lantern / lamp -->
+  <line x1="400" y1="220" x2="400" y2="270" stroke="#8B5E3C" stroke-width="3"/>
+  <ellipse cx="400" cy="282" rx="20" ry="14" fill="#E8A030" opacity="0.9"/>
+  <ellipse cx="400" cy="276" rx="16" ry="10" fill="#FFE060" opacity="0.9" filter="url(#glow)"/>
+  <!-- Lamp glow -->
+  <ellipse cx="400" cy="320" rx="80" ry="50" fill="#FFD060" opacity="0.2"/>
+</svg>

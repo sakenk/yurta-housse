@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Горный пейзаж — вид из Бескайнар">
+  <defs>
+    <linearGradient id="sky4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A8BC8"/>
+      <stop offset="40%" stop-color="#7AAAD8"/>
+      <stop offset="100%" stop-color="#B8D8F0"/>
+    </linearGradient>
+    <linearGradient id="mtn1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="15%" stop-color="#E0EAF5"/>
+      <stop offset="45%" stop-color="#8AABB8"/>
+      <stop offset="100%" stop-color="#5A7A8A"/>
+    </linearGradient>
+    <linearGradient id="mtn2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="18%" stop-color="#D0E2EE"/>
+      <stop offset="50%" stop-color="#7090A0"/>
+      <stop offset="100%" stop-color="#4A6A78"/>
+    </linearGradient>
+    <linearGradient id="mtn3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A7C59"/>
+      <stop offset="100%" stop-color="#2A5038"/>
+    </linearGradient>
+    <linearGradient id="valley" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5A9050"/>
+      <stop offset="100%" stop-color="#3A6A38"/>
+    </linearGradient>
+    <linearGradient id="fg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6A9A58"/>
+      <stop offset="100%" stop-color="#4A7A3A"/>
+    </linearGradient>
+    <radialGradient id="sunburst" cx="68%" cy="12%" r="40%">
+      <stop offset="0%" stop-color="#FFE566" stop-opacity="0.7"/>
+      <stop offset="60%" stop-color="#FFD040" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FFD040" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur-mtn">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="500" fill="url(#sky4)"/>
+
+  <!-- Sun rays -->
+  <rect width="800" height="500" fill="url(#sunburst)"/>
+  <!-- Sun disc -->
+  <circle cx="544" cy="60" r="32" fill="#FFE566" opacity="0.9"/>
+  <circle cx="544" cy="60" r="24" fill="#FFF4A0" opacity="0.8"/>
+
+  <!-- Clouds -->
+  <g opacity="0.85">
+    <ellipse cx="100" cy="80" rx="90" ry="28" fill="white"/>
+    <ellipse cx="65" cy="75" rx="50" ry="24" fill="white"/>
+    <ellipse cx="145" cy="82" rx="55" ry="22" fill="white"/>
+    <ellipse cx="290" cy="55" rx="70" ry="22" fill="white" opacity="0.7"/>
+    <ellipse cx="256" cy="52" rx="42" ry="18" fill="white" opacity="0.65"/>
+    <ellipse cx="332" cy="58" rx="45" ry="18" fill="white" opacity="0.65"/>
+    <ellipse cx="700" cy="70" rx="75" ry="24" fill="white" opacity="0.75"/>
+    <ellipse cx="664" cy="66" rx="45" ry="20" fill="white" opacity="0.7"/>
+    <ellipse cx="746" cy="72" rx="48" ry="20" fill="white" opacity="0.65"/>
+  </g>
+
+  <!-- Tallest / furthest mountains (highest peak like Talgar) -->
+  <polygon points="-10,420 60,200 100,240 160,140 200,180 250,100 290,150 340,80 380,120 420,70 460,110 500,50 540,90 580,60 620,100 660,80 700,120 740,85 780,130 810,110 810,420" fill="url(#mtn1)" filter="url(#blur-mtn)"/>
+
+  <!-- Snow on tallest peak -->
+  <polygon points="500,50 520,80 500,95 480,80" fill="white" opacity="0.95"/>
+  <polygon points="420,70 445,100 420,112 398,100" fill="white" opacity="0.9"/>
+  <polygon points="580,60 600,88 578,100 558,88" fill="white" opacity="0.9"/>
+  <polygon points="340,80 365,112 340,126 318,112" fill="white" opacity="0.9"/>
+  <polygon points="250,100 276,134 251,148 228,134" fill="white" opacity="0.85"/>
+
+  <!-- Second mountain layer -->
+  <polygon points="-10,440 40,280 120,320 220,230 320,280 420,210 520,265 620,215 720,255 810,220 810,440" fill="url(#mtn2)" opacity="0.9"/>
+
+  <!-- Third layer — green mountains -->
+  <polygon points="-10,460 50,340 130,370 230,310 330,355 430,305 530,350 630,315 730,348 810,320 810,460" fill="url(#mtn3)"/>
+  <!-- Trees on green mountains -->
+  <g fill="#1E4A28">
+    <polygon points="55,352 45,385 65,385"/>
+    <polygon points="130,365 118,400 142,400"/>
+    <polygon points="240,308 228,342 252,342"/>
+    <polygon points="435,310 423,344 447,344"/>
+    <polygon points="640,318 628,352 652,352"/>
+    <polygon points="735,345 723,378 747,378"/>
+  </g>
+
+  <!-- Valley with river -->
+  <ellipse cx="400" cy="460" rx="500" ry="40" fill="url(#valley)"/>
+  <!-- River/stream -->
+  <path d="M150,470 Q280,455 400,462 Q520,468 660,460" fill="none" stroke="#7AAFD8" stroke-width="8" opacity="0.6"/>
+  <path d="M150,474 Q280,459 400,466 Q520,473 660,464" fill="none" stroke="#A8CCE8" stroke-width="4" opacity="0.5"/>
+
+  <!-- Foreground meadow -->
+  <rect y="460" width="800" height="40" fill="url(#fg)"/>
+
+  <!-- Foreground wildflowers and grass -->
+  <g>
+    <!-- Left flowers -->
+    <line x1="30" y1="480" x2="32" y2="460" stroke="#4A7A38" stroke-width="2"/>
+    <circle cx="32" cy="458" r="5" fill="#F5C842"/>
+    <line x1="50" y1="482" x2="48" y2="462" stroke="#4A7A38" stroke-width="2"/>
+    <circle cx="48" cy="460" r="4" fill="#C4623A"/>
+    <line x1="68" y1="478" x2="70" y2="458" stroke="#4A7A38" stroke-width="2"/>
+    <circle cx="70" cy="456" r="5" fill="#F5C842"/>
+
+    <!-- Right flowers -->
+    <line x1="730" y1="480" x2="732" y2="460" stroke="#4A7A38" stroke-width="2"/>
+    <circle cx="732" cy="458" r="5" fill="#F5C842"/>
+    <line x1="750" y1="482" x2="748" y2="462" stroke="#4A7A38" stroke-width="2"/>
+    <circle cx="748" cy="460" r="4" fill="#C4623A"/>
+    <line x1="768" y1="478" x2="770" y2="458" stroke="#4A7A38" stroke-width="2"/>
+    <circle cx="770" cy="456" r="5" fill="#F5C842"/>
+  </g>
+
+  <!-- Pine trees foreground left -->
+  <g fill="#1E4020">
+    <polygon points="0,500 -8,440 8,440"/>
+    <polygon points="0,500 -15,460 15,460"/>
+    <polygon points="0,500 -20,480 20,480"/>
+    <rect x="-5" y="498" width="10" height="2" fill="#5C3A12"/>
+  </g>
+  <g fill="#2A5530" transform="translate(24, 0)">
+    <polygon points="0,500 -8,448 8,448"/>
+    <polygon points="0,500 -13,465 13,465"/>
+    <polygon points="0,500 -18,482 18,482"/>
+    <rect x="-4" y="498" width="8" height="2" fill="#5C3A12"/>
+  </g>
+
+  <!-- Pine trees foreground right -->
+  <g fill="#1E4020" transform="translate(800, 0)">
+    <polygon points="0,500 -8,440 8,440"/>
+    <polygon points="0,500 -15,460 15,460"/>
+    <polygon points="0,500 -20,480 20,480"/>
+  </g>
+  <g fill="#2A5530" transform="translate(775, 0)">
+    <polygon points="0,500 -8,448 8,448"/>
+    <polygon points="0,500 -13,465 13,465"/>
+    <polygon points="0,500 -18,482 18,482"/>
+  </g>
+
+  <!-- Atmospheric haze on far mountains -->
+  <rect y="130" width="800" height="100" fill="#C8E0F0" opacity="0.15"/>
+</svg>

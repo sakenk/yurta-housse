@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Конная прогулка в горах">
+  <defs>
+    <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7BAFD4"/>
+      <stop offset="100%" stop-color="#C8E0F0"/>
+    </linearGradient>
+    <linearGradient id="ground2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6B8A50"/>
+      <stop offset="100%" stop-color="#4A6A35"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="600" fill="url(#sky2)"/>
+
+  <!-- Clouds -->
+  <ellipse cx="150" cy="90" rx="80" ry="26" fill="white" opacity="0.75"/>
+  <ellipse cx="110" cy="85" rx="45" ry="22" fill="white" opacity="0.7"/>
+  <ellipse cx="195" cy="92" rx="50" ry="20" fill="white" opacity="0.65"/>
+  <ellipse cx="580" cy="65" rx="90" ry="28" fill="white" opacity="0.7"/>
+  <ellipse cx="540" cy="60" rx="50" ry="22" fill="white" opacity="0.65"/>
+  <ellipse cx="635" cy="68" rx="55" ry="22" fill="white" opacity="0.6"/>
+
+  <!-- Far mountains -->
+  <polygon points="-10,380 100,180 200,260 320,130 440,220 560,110 660,200 760,140 810,220 810,380" fill="#7AACB8" opacity="0.7"/>
+  <!-- Snow -->
+  <polygon points="320,130 360,180 285,180" fill="white" opacity="0.85"/>
+  <polygon points="560,110 600,158 525,158" fill="white" opacity="0.85"/>
+
+  <!-- Mid mountains -->
+  <polygon points="-10,460 60,310 160,370 260,270 380,350 500,250 600,330 700,270 810,340 810,460" fill="#4A7C59"/>
+  <!-- Trees on mid mountain -->
+  <g fill="#2D5C38">
+    <polygon points="80,350 70,390 90,390"/>
+    <polygon points="140,340 128,382 152,382"/>
+    <polygon points="600,320 590,358 610,358"/>
+    <polygon points="660,308 648,350 672,350"/>
+    <polygon points="720,320 708,362 732,362"/>
+  </g>
+
+  <!-- Ground -->
+  <rect y="460" width="800" height="140" fill="url(#ground2)"/>
+  <!-- Path/trail -->
+  <path d="M200,600 Q350,500 500,480 Q620,465 800,490" fill="none" stroke="#C4A87A" stroke-width="20" opacity="0.4"/>
+
+  <!-- Wildflowers -->
+  <g>
+    <circle cx="50" cy="480" r="4" fill="#E8B84B"/>
+    <circle cx="70" cy="490" r="3" fill="#C4623A"/>
+    <circle cx="90" cy="475" r="4" fill="#E8B84B"/>
+    <circle cx="730" cy="478" r="4" fill="#E8B84B"/>
+    <circle cx="748" cy="490" r="3" fill="#C4623A"/>
+    <circle cx="765" cy="476" r="4" fill="#E8B84B"/>
+  </g>
+
+  <!-- HORSE SILHOUETTE (walking left to right) -->
+  <g transform="translate(310, 310)" fill="#4A2C0A">
+    <!-- Body -->
+    <ellipse cx="90" cy="100" rx="90" ry="55" fill="#5C3A12"/>
+    <!-- Neck -->
+    <path d="M150,60 Q170,30 165,5 Q155,-10 145,8 Q138,30 140,60" fill="#5C3A12"/>
+    <!-- Head -->
+    <ellipse cx="165" cy="-5" rx="28" ry="22" fill="#5C3A12"/>
+    <!-- Ear -->
+    <polygon points="155,-22 150,-42 165,-28" fill="#5C3A12"/>
+    <!-- Eye -->
+    <circle cx="172" cy="-8" r="4" fill="#1A0A00"/>
+    <circle cx="173" cy="-9" r="1.5" fill="white" opacity="0.6"/>
+    <!-- Nostril -->
+    <ellipse cx="182" cy="4" rx="4" ry="2.5" fill="#3A2008" opacity="0.7"/>
+    <!-- Mane -->
+    <path d="M145,8 Q130,20 125,45 Q130,42 135,50 Q140,38 145,55 Q150,40 155,52 Q160,35 165,48 Q165,30 170,15" fill="#2A1505" stroke="#2A1505" stroke-width="2"/>
+    <!-- Legs (4) -->
+    <rect x="40" y="145" width="18" height="70" rx="6" fill="#4A2C0A"/>
+    <rect x="70" y="148" width="18" height="66" rx="6" fill="#4A2C0A"/>
+    <rect x="110" y="148" width="18" height="67" rx="6" fill="#4A2C0A"/>
+    <rect x="140" y="145" width="18" height="70" rx="6" fill="#4A2C0A"/>
+    <!-- Hooves -->
+    <rect x="39" y="210" width="20" height="10" rx="4" fill="#2A1505"/>
+    <rect x="69" y="209" width="20" height="10" rx="4" fill="#2A1505"/>
+    <rect x="109" y="210" width="20" height="10" rx="4" fill="#2A1505"/>
+    <rect x="139" y="210" width="20" height="10" rx="4" fill="#2A1505"/>
+    <!-- Tail -->
+    <path d="M10,90 Q-20,100 -15,130 Q-10,160 -5,145 Q0,125 8,140 Q12,120 5,100" fill="#2A1505"/>
+
+    <!-- RIDER -->
+    <!-- Torso -->
+    <rect x="105" y="20" width="35" height="50" rx="8" fill="#C4623A"/>
+    <!-- Head -->
+    <circle cx="122" cy="8" r="20" fill="#D4956A"/>
+    <!-- Hat -->
+    <ellipse cx="122" cy="-8" rx="26" ry="8" fill="#8B5E3C"/>
+    <rect x="108" y="-18" width="28" height="14" rx="6" fill="#8B5E3C"/>
+    <!-- Arm left -->
+    <line x1="105" y1="35" x2="80" y2="55" stroke="#C4623A" stroke-width="12" stroke-linecap="round"/>
+    <!-- Arm right (holding reins) -->
+    <line x1="140" y1="35" x2="158" y2="20" stroke="#C4623A" stroke-width="12" stroke-linecap="round"/>
+    <!-- Reins -->
+    <path d="M158,20 Q170,10 180,-2" fill="none" stroke="#8B5E3C" stroke-width="3"/>
+    <!-- Legs of rider -->
+    <line x1="112" y1="68" x2="85" y2="100" stroke="#2C1E0F" stroke-width="14" stroke-linecap="round"/>
+    <line x1="130" y1="68" x2="158" y2="100" stroke="#2C1E0F" stroke-width="14" stroke-linecap="round"/>
+  </g>
+
+  <!-- Second horse (distant, smaller) -->
+  <g transform="translate(560, 370) scale(0.55)" fill="#3A2808" opacity="0.7">
+    <ellipse cx="90" cy="100" rx="88" ry="52" fill="#4A3010"/>
+    <path d="M150,60 Q170,30 165,5 Q152,−5 145,10 Q138,32 140,60" fill="#4A3010"/>
+    <ellipse cx="165" cy="0" rx="25" ry="20" fill="#4A3010"/>
+    <rect x="40" y="145" width="16" height="65" rx="5" fill="#3A2808"/>
+    <rect x="70" y="148" width="16" height="62" rx="5" fill="#3A2808"/>
+    <rect x="110" y="148" width="16" height="63" rx="5" fill="#3A2808"/>
+    <rect x="140" y="145" width="16" height="65" rx="5" fill="#3A2808"/>
+    <!-- Rider silhouette -->
+    <rect x="105" y="22" width="32" height="48" rx="6" fill="#8B4A28"/>
+    <circle cx="121" cy="8" r="18" fill="#6B3820"/>
+  </g>
+
+  <!-- Foreground grass details -->
+  <g stroke="#3A6030" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M20,500 Q25,480 22,470"/>
+    <path d="M28,505 Q32,484 30,472"/>
+    <path d="M750,498 Q755,477 752,466"/>
+    <path d="M758,503 Q763,481 760,469"/>
+  </g>
+</svg>
