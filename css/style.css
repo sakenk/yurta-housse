@@ -145,6 +145,7 @@ input, textarea, select { font-family: inherit; }
 .btn svg, .btn img { width: 22px; height: 22px; flex-shrink: 0; }
 
 /* --- ======= HEADER ======= --- */
+.header .container { height: 100%; }
 .header {
   position: fixed;
   top: 0;
@@ -312,9 +313,7 @@ input, textarea, select { font-family: inherit; }
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(44,30,15,0.55) 0%, rgba(44,30,15,0.3) 60%, rgba(44,30,15,0.6) 100%),
-    linear-gradient(135deg, #4A7C59 0%, #3A6347 30%, #8B5E3C 60%, #C4623A 100%);
-  background-size: cover;
-  background-position: center;
+    url('../images/yurta-night.png') center / cover no-repeat;
 }
 
 /* When real photo added: background-image: url('../images/hero.webp'); */
