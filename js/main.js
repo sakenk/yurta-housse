@@ -14,21 +14,24 @@ function $$(sel, ctx = document) { return [...ctx.querySelectorAll(sel)]; }
 /* ---- Language switcher ---- */
 (function initLang() {
   const btns = $$('.lang-switcher__btn');
-  const isKZ = window.location.pathname.startsWith('/kz') || window.location.pathname.includes('/kz/');
+  const path = window.location.pathname;
+  const currentLang = path.includes('/kz/') || path.includes('/kz\\') ? 'kz'
+                    : path.includes('/en/') || path.includes('/en\\') ? 'en'
+                    : 'ru';
 
   btns.forEach(btn => {
     const lang = btn.dataset.lang;
-    btn.classList.toggle('active', isKZ ? lang === 'kz' : lang === 'ru');
+    btn.classList.toggle('active', lang === currentLang);
 
     btn.addEventListener('click', () => {
       if (btn.classList.contains('active')) return;
       localStorage.setItem('yurta_lang', lang);
-      if (lang === 'kz') {
-        const base = window.location.origin;
-        window.location.href = base + '/kz/';
+      if (currentLang === 'ru') {
+        window.location.href = lang + '/';
+      } else if (lang === 'ru') {
+        window.location.href = '../';
       } else {
-        const base = window.location.origin;
-        window.location.href = base + '/';
+        window.location.href = '../' + lang + '/';
       }
     });
   });
