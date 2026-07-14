@@ -13,18 +13,22 @@ function $$(sel, ctx = document) { return [...ctx.querySelectorAll(sel)]; }
 
 /* ---- Language switcher ---- */
 (function initLang() {
-  const btns = $$('.lang-switcher__btn');
+  const switcher = $('.lang-switcher');
+  if (!switcher) return;
+
   const path = window.location.pathname;
   const currentLang = path.includes('/kz/') || path.includes('/kz\\') ? 'kz'
                     : path.includes('/en/') || path.includes('/en\\') ? 'en'
                     : 'ru';
 
-  btns.forEach(btn => {
-    const lang = btn.dataset.lang;
-    btn.classList.toggle('active', lang === currentLang);
+  const toggle = $('.lang-switcher__toggle', switcher);
+  $('.lang-switcher__current', switcher).textContent = currentLang.toUpperCase();
 
-    btn.addEventListener('click', () => {
-      if (btn.classList.contains('active')) return;
+  $$('.lang-switcher__option', switcher).forEach(opt => {
+    const lang = opt.dataset.lang;
+    if (lang === currentLang) { opt.closest('li').style.display = 'none'; return; }
+
+    opt.addEventListener('click', () => {
       localStorage.setItem('yurta_lang', lang);
       if (currentLang === 'ru') {
         window.location.href = lang + '/';
@@ -34,6 +38,17 @@ function $$(sel, ctx = document) { return [...ctx.querySelectorAll(sel)]; }
         window.location.href = '../' + lang + '/';
       }
     });
+  });
+
+  toggle.addEventListener('click', e => {
+    e.stopPropagation();
+    const isOpen = switcher.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  document.addEventListener('click', () => {
+    switcher.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
   });
 })();
 
