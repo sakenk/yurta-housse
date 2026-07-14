@@ -4,25 +4,40 @@
 
   <url>
     <loc>https://yurta-housse.kz/</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://yurta-housse.kz/" />
-    <xhtml:link rel="alternate" hreflang="kk" href="https://yurta-housse.kz/kz/" />
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://yurta-housse.kz/" />
+    <xhtml:link rel="alternate" hreflang="kk"        href="https://yurta-housse.kz/kz/" />
+    <xhtml:link rel="alternate" hreflang="en"        href="https://yurta-housse.kz/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yurta-housse.kz/" />
   </url>
 
   <url>
     <loc>https://yurta-housse.kz/kz/</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://yurta-housse.kz/" />
-    <xhtml:link rel="alternate" hreflang="kk" href="https://yurta-housse.kz/kz/" />
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://yurta-housse.kz/" />
+    <xhtml:link rel="alternate" hreflang="kk"        href="https://yurta-housse.kz/kz/" />
+    <xhtml:link rel="alternate" hreflang="en"        href="https://yurta-housse.kz/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yurta-housse.kz/" />
+  </url>
+
+  <url>
+    <loc>https://yurta-housse.kz/en/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://yurta-housse.kz/" />
+    <xhtml:link rel="alternate" hreflang="kk"        href="https://yurta-housse.kz/kz/" />
+    <xhtml:link rel="alternate" hreflang="en"        href="https://yurta-housse.kz/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yurta-housse.kz/" />
   </url>
 
   <url>
     <loc>https://yurta-housse.kz/privacy.html</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
