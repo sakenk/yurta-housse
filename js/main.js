@@ -7,6 +7,17 @@
 const WA_NUMBER = '77718482157';
 const WA_DEFAULT_MSG = 'Здравствуйте! Хочу забронировать юрту.';
 
+/* ---- Page language and form texts ---- */
+const PAGE_LANG = /\/kz(\/|\\|$)/.test(window.location.pathname) ? 'kz'
+                : /\/en(\/|\\|$)/.test(window.location.pathname) ? 'en'
+                : 'ru';
+
+const FORM_TEXT = {
+  ru: { hello: 'Здравствуйте! Хочу забронировать юрту.', name: 'Имя', phone: 'Телефон', date: 'Дата', guests: 'Гостей', comment: 'Комментарий', badPhone: 'Введите корректный номер' },
+  kz: { hello: 'Сәлеметсіз бе! Киіз үйді брондағым келеді.', name: 'Аты', phone: 'Телефон', date: 'Күні', guests: 'Қонақтар', comment: 'Пікір', badPhone: 'Дұрыс нөмірді енгізіңіз' },
+  en: { hello: 'Hello! I would like to book the yurt.', name: 'Name', phone: 'Phone', date: 'Date', guests: 'Guests', comment: 'Comment', badPhone: 'Enter a valid phone number' }
+}[PAGE_LANG];
+
 /* ---- Utility ---- */
 function $(sel, ctx = document) { return ctx.querySelector(sel); }
 function $$(sel, ctx = document) { return [...ctx.querySelectorAll(sel)]; }
@@ -224,7 +235,7 @@ function $$(sel, ctx = document) { return [...ctx.querySelectorAll(sel)]; }
       const err = document.getElementById('f-phone-err');
       if (!valid) {
         phone.classList.add('error');
-        if (err) { err.textContent = 'Введите корректный номер'; err.classList.add('visible'); }
+        if (err) { err.textContent = FORM_TEXT.badPhone; err.classList.add('visible'); }
         ok = false;
       }
     }
@@ -247,10 +258,10 @@ function $$(sel, ctx = document) { return [...ctx.querySelectorAll(sel)]; }
     const guests = (document.getElementById('f-guests') || {}).value || '';
     const comment = (document.getElementById('f-comment') || {}).value || '';
 
-    let msg = `Здравствуйте! Хочу забронировать юрту.\nИмя: ${name}\nТелефон: ${phone}`;
-    if (date) msg += `\nДата: ${date}`;
-    if (guests) msg += `\nГостей: ${guests}`;
-    if (comment) msg += `\nКомментарий: ${comment}`;
+    let msg = `${FORM_TEXT.hello}\n${FORM_TEXT.name}: ${name}\n${FORM_TEXT.phone}: ${phone}`;
+    if (date) msg += `\n${FORM_TEXT.date}: ${date}`;
+    if (guests) msg += `\n${FORM_TEXT.guests}: ${guests}`;
+    if (comment) msg += `\n${FORM_TEXT.comment}: ${comment}`;
 
     const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank', 'noopener');
